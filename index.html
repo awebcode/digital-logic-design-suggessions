@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DLD Final Exam - Complete Answer Sheet</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="https://media.licdn.com/dms/image/v2/D4E03AQFfv9OAkIgT4A/profile-displayphoto-scale_200_200/B4EZo9.kS7HoAY-/0/1761976404331?e=1767225600&v=beta&t=iMGlUm7Ugr37rRMVo4okBGt7xrTKs3E1Dlyl2jth9xs" sizes="any">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="DLD Final Exam - Complete Answer Sheet" />
+    <meta property="og:description" content="Complete, exam-ready Digital Logic Design final exam answers with clear explanations and clean formatting." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://eee.zhsust.ac.bd/wp-content/uploads/2022/09/Digital-Electronics.jpg" />
+    <meta property="og:image" content="https://eee.zhsust.ac.bd/wp-content/uploads/2022/09/Digital-Electronics.jpg" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="DLD Final Exam - Complete Answer Sheet" />
+    <meta name="twitter:description" content="Complete, exam-ready Digital Logic Design final exam answers." />
+    <meta name="twitter:image" content="https://eee.zhsust.ac.bd/wp-content/uploads/2022/09/Digital-Electronics.jpg" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f4f7f6;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        
+        .header {
+            background: #2c3e50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+        }
+        
+        .header h1 {
+            font-size: 2em;
+            margin-bottom: 5px;
+        }
+        
+        .header p {
+            font-size: 1.1em;
+            opacity: 0.9;
+        }
+        
+        .content {
+            padding: 30px;
+        }
+        
+        .question-block {
+            margin-bottom: 40px;
+            border-bottom: 2px solid #ecf0f1;
+            padding-bottom: 30px;
+        }
+        
+        .question-block:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        
+        .question {
+            color: #2980b9;
+            font-size: 1.5em;
+            font-weight: bold;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .q-number {
+            background: #3498db;
+            color: white;
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            font-size: 1em;
+            flex-shrink: 0;
+        }
+        
+        .answer {
+            padding-left: 50px;
+        }
+        
+        .answer h3 {
+            color: #34495e;
+            font-size: 1.2em;
+            margin-bottom: 10px;
+            border-left: 4px solid #3498db;
+            padding-left: 10px;
+        }
+        
+        .definition {
+            background: #fdfefe;
+            border: 1px solid #ebedef;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 15px;
+        }
+        
+        .diagram-container {
+            background: #f8f9fa;
+            border: 1px dashed #bdc3c7;
+            padding: 20px;
+            margin: 15px 0;
+            text-align: center;
+            border-radius: 5px;
+        }
+        
+        .diagram-title {
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+        
+        .diagram-image {
+            max-width: 100%;
+            display: block;
+            margin: 0 auto;
+            height: auto;
+            background: white;
+            border: 1px solid #ddd;
+            padding: 10px;
+            border-radius: 4px;
+        }
+        
+        .truth-table {
+            width: 100%;
+            max-width: 400px;
+            border-collapse: collapse;
+            margin: 15px 0;
+            font-size: 0.9em;
+        }
+        
+        .truth-table th {
+            background: #3498db;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+        
+        .truth-table td {
+            padding: 8px;
+            text-align: center;
+            border: 1px solid #ecf0f1;
+        }
+        
+        .formula {
+            background: #e8f4fd;
+            padding: 15px;
+            border-radius: 5px;
+            font-family: 'Courier New', monospace;
+            margin: 10px 0;
+            border-left: 4px solid #3498db;
+        }
+        
+        .sub-section {
+            margin-top: 20px;
+        }
+        
+        .sub-section h4 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+        
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+        
+        .comparison-table th {
+            background: #34495e;
+            color: white;
+            padding: 12px;
+            text-align: left;
+        }
+        
+        .comparison-table td {
+            padding: 12px;
+            border: 1px solid #ecf0f1;
+        }
+        
+        .comparison-table tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+        
+        .applications {
+            background: #eafaf1;
+            border: 1px solid #c8e6c9;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 15px 0;
+        }
+        
+        .applications h4 {
+            color: #2e7d32;
+            margin-bottom: 10px;
+        }
+        
+        .applications ul {
+            padding-left: 20px;
+        }
+        
+        .applications li {
+            margin-bottom: 5px;
+        }
+        
+        .highlight {
+            background: #fffde7;
+            border: 1px solid #fff9c4;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 15px 0;
+        }
+        
+        .highlight h4 {
+            color: #f57f17;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Digital Logic Design - Final Exam</h1>
+            <p>Complete Answer Sheet for Uttara University</p>
+        </div>
+        
+        <div class="content">
+            <!-- Question 1: Logic Gates -->
+            <div class="question-block">
+                <div class="question">
+                    <span class="q-number">1</span>
+                    <span>Logic Gates & Universal Gates</span>
+                </div>
+                
+                <div class="answer">
+                    <h3>Q1(a): Define Universal Gates</h3>
+                    <div class="definition">
+                        <p><strong>Universal Gates</strong> are logic gates that can be used to implement any Boolean function without needing any other gate type. The two main universal gates are NAND and NOR.</p>
+                    </div>
+                  
+                    <div class="formula">
+                        <strong>NAND:</strong> Y = (A · B)' <br>
+                        <strong>NOR:</strong> Y = (A + B)'
+                    </div>
+
+                    <h3>Q1(b): Implement Basic Gates using NOR</h3>
+                      <div class="diagram-container">
+                            <img src="images/nor_gate.jpg" alt="NOT from NOR" class="diagram-image">
+                        </div>
+                    <div class="sub-section">
+                        <h4>NOT Gate using NOR:</h4>
+                        <p>Connect both inputs of a NOR gate together.</p>
+                        <div class="formula">Y = A ↓ A = (A + A)' = A'</div>
+                        <div class="diagram-container">
+                            <div class="diagram-title">NOT Gate from NOR</div>
+                            <img src="images/nor_to_not.jpg" alt="NOT from NOR" class="diagram-image">
+                        </div>
+                    </div>
+                    <div class="sub-section">
+                        <h4>OR Gate using NOR:</h4>
+                        <p>Invert the output of a NOR gate to get an OR function.</p>
+                        <div class="formula">Y = (A ↓ B)' = (A + B)'' = A + B</div>
+                        <div class="diagram-container">
+                            <div class="diagram-title">OR Gate from NOR</div>
+                            <img src="images/nor_to_or.jpg" alt="OR from NOR" class="diagram-image">
+                        </div>
+                    </div>
+                    <div class="sub-section">
+                        <h4>AND Gate using NOR:</h4>
+                        <p>Invert the inputs before feeding them into a NOR gate.</p>
+                        <div class="formula">Y = (A' ↓ B') = (A' + B')' = A · B</div>
+                        <div class="diagram-container">
+                            <div class="diagram-title">AND Gate from NOR</div>
+                            <img src="images/nor_to_and.jpg" alt="AND from NOR" class="diagram-image">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Question 2: K-Map -->
+            <div class="question-block">
+                <div class="question">
+                    <span class="q-number">2</span>
+                    <span>Karnaugh Map (K-Map) Simplification</span>
+                </div>
+                
+                <div class="answer">
+                    <h3>Q2(a): Simplify a 3-bit expression using K-Map</h3>
+                    <div class="definition">
+                        <p>A <strong>Karnaugh Map (K-Map)</strong> is a graphical method to simplify Boolean algebra expressions. It helps minimize the number of logic gates required.</p>
+                    </div>
+                    <p><strong>Example:</strong> Simplify F(A,B,C) = Σm(0,2,4,6)</p>
+                    <div class="diagram-container">
+                        <div class="diagram-title">3-Variable K-Map Example</div>
+                        <img src="https://pantech.ai/wp-content/uploads/2024/09/3var_kmap.png" alt="3-Variable K-Map Example" class="diagram-image">
+                    </div>
+                    <div class="formula">
+                        <strong>Grouping:</strong> Group of four '1's in first and last columns (A'C' and AC').<br>
+                        <strong>Simplified Expression:</strong> F = C'
+                    </div>
+
+                    <h3>Q2(b): Simplify a 2-bit expression using K-Map</h3>
+                    <p><strong>Example:</strong> Simplify F(A,B) = Σm(1,2)</p>
+                    <div class="diagram-container">
+                        <div class="diagram-title">2-Variable K-Map Example</div>
+                        <img src="https://pantech.ai/wp-content/uploads/2024/09/K-Map-2-var-1-1024x576.png" alt="2-Variable K-Map Example" class="diagram-image">
+                    </div>
+                    <div class="formula">
+                        <strong>Grouping:</strong> Group of two '1's in first row (A'B' and A'B) and single '1' in second row (AB').<br>
+                        <strong>Simplified Expression:</strong> F = A' + B'
+                    </div>
+                </div>
+            </div>
+
+            <!-- Question 3: Adders and Subtractors -->
+            <div class="question-block">
+                <div class="question">
+                    <span class="q-number">3</span>
+                    <span>Adders and Subtractors</span>
+                </div>
+                
+                <div class="answer">
+                    <h3>Q3(a): Half Adder</h3>
+                    <div class="definition">
+                        <p>A <strong>Half Adder</strong> adds two single bits and produces a Sum and a Carry output. It does not account for a carry-in from a previous stage.</p>
+                    </div>
+                    <div class="diagram-container">
+                        <div class="diagram-title">Half Adder Circuit</div>
+                        <img src="https://media.geeksforgeeks.org/wp-content/uploads/20240404131356/Half-Adder-2.png" alt="Half Adder Circuit" class="diagram-image">
+                    </div>
+                    <div class="formula">
+                        <strong>Boolean Expressions:</strong><br>
+                        Sum (S) = A ⊕ B<br>
+                        Carry (C) = A · B
+                    </div>
+                   
+                    <h3>Q3(b): Full Adder using Half Adders</h3>
+                    <div class="definition">
+                        <p>A <strong>Full Adder</strong> adds three bits (A, B, and a Carry-In) and produces a Sum and a Carry-Out. It is the fundamental building block for multi-bit adders.</p>
+                    </div>
+                    <div class="diagram-container">
+                        <div class="diagram-title">Full Adder Circuit</div>
+                        <img src="https://theorycircuit.com/wp-content/uploads/2018/07/full-adder-circuit.png" alt="Full Adder Circuit" class="diagram-image">
+                    </div>
+              
+                    <div class="formula">
+                        <strong>Boolean Expressions:</strong><br>
+                        Sum (S) = A ⊕ B ⊕ Cin<br>
+                        Carry (Cout) = A·B + B·Cin + A·Cin
+                    </div>
+                  
+                     <h3>Q3(b.1): Full Adder using Decoder</h3>
+                    <div class="definition">
+                        <p>A <strong>Full Adder</strong> adds three bits (A, B, and a Carry-In) and produces a Sum and a Carry-Out. It is the fundamental building block for multi-bit adders.</p>
+                    </div>
+                    <div class="diagram-container">
+                        <div class="diagram-title">Full Adder Circuit</div>
+                        <img src="  https://www.poriyaan.in/media/imgPori/images12/TY3oo29.png" alt="Full Adder Circuit" class="diagram-image">
+                    </div>
+                 
+                 
+
+                    <h3>Q3(c): Subtractor</h3>
+                    <div class="definition">
+                        <p>A <strong>Subtractor</strong> is a digital circuit that performs subtraction of binary numbers. There are two types: Half Subtractor (subtracts two bits) and Full Subtractor (subtracts three bits including a borrow).</p>
+                    </div>
+                    <div class="sub-section">
+                        <h4>Half Subtractor</h4>
+                        <div class="formula">
+                            <strong>Boolean Expressions:</strong><br>
+                            Difference (D) = A ⊕ B<br>
+                            Borrow (Bout) = A' · B
+                        </div>
+                        <div class="diagram-container">
+                            <div class="diagram-title">Half Subtractor Circuit</div>
+                            <img src="https://www.electronics-tutorial.net/wp-content/uploads/2015/09/half_sub.png" alt="Half Subtractor Circuit" class="diagram-image">
+                        </div>
+                    </div>
+                   
+                </div>
+            </div>
+
+            <!-- Question 4: Encoders and Decoders -->
+            <div class="question-block">
+                <div class="question">
+                    <span class="q-number">4</span>
+                    <span>Encoders and Decoders</span>
+                </div>
+                
+                <div class="answer">
+                    <h3>Q4(a): Encoder Definition</h3>
+                    <div class="definition">
+                        <p>An <strong>Encoder</strong> is a combinational circuit that converts information from 2^n input lines into an n-bit binary code. It has more inputs than outputs and produces a binary code corresponding to the active input line.</p>
+                    </div>
+                    <div class="diagram-container">
+                        <div class="diagram-title">8-to-3 Encoder</div>
+                        <img src="images/8_to_3_encoder.jpg" alt="8-to-3 Encoder" class="diagram-image">
+                    </div>
+
+                    <h3>Q4(b): Decoder Definition</h3>
+                    <div class="definition">
+                        <p>A <strong>Decoder</strong> is a combinational circuit that converts binary information from n input lines to a maximum of 2^n unique output lines. It has more outputs than inputs and activates a specific output line based on the binary input.</p>
+                    </div>
+                    <div class="diagram-container">
+                        <div class="diagram-title">2-to-4 Decoder</div>
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Decoder_Example.svg/500px-Decoder_Example.svg.png" alt="2-to-4 Decoder" class="diagram-image">
+                    </div>
+
+                    <h3>Q4(c): Encoder vs. Decoder</h3>
+                    <table class="comparison-table">
+                        <tr>
+                            <th>Feature</th>
+                            <th>Encoder</th>
+                            <th>Decoder</th>
+                        </tr>
+                        <tr>
+                            <td><strong>Function</strong></td>
+                            <td>Converts 2^n inputs into an n-bit binary code.</td>
+                            <td>Converts an n-bit binary code into 2^n unique outputs.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Operation</strong></td>
+                            <td>Compresses data (many-to-few).</td>
+                            <td>Expands data (few-to-many).</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Example</strong></td>
+                            <td>8-to-3 Encoder (8 inputs, 3 outputs).</td>
+                            <td>3-to-8 Decoder (3 inputs, 8 outputs).</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Use Case</strong></td>
+                            <td>Keyboard encoding, converting keypad presses to a binary value.</td>
+                            <td>Memory address decoding, selecting one of many memory locations.</td>
+                        </tr>
+                    </table>
+                    
+                    <h3>Q4(d): Applications of Encoder and Decoder</h3>
+                    <div class="applications">
+                        <h4>Applications of Encoder:</h4>
+                        <ul>
+                            <li>Keyboard encoding in computers</li>
+                            <li>Data compression systems</li>
+                            <li>Position encoding in robotics</li>
+                            <li>Analog-to-digital conversion</li>
+                        </ul>
+                    </div>
+                    <div class="applications">
+                        <h4>Applications of Decoder:</h4>
+                        <ul>
+                            <li>Memory address decoding in computer systems</li>
+                            <li>Display drivers (e.g., 7-segment display)</li>
+                            <li>Instruction decoding in CPUs</li>
+                            <li>Data routing in communication systems</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Question 5: Multiplexers -->
+            <div class="question-block">
+                <div class="question">
+                    <span class="q-number">5</span>
+                    <span>Multiplexers (MUX) and Demultiplexers (DEMUX)</span>
+                </div>
+                
+                <div class="answer">
+                    <h3>Q5(a): Multiplexer (MUX)</h3>
+                    <div class="definition">
+                        <p>A <strong>Multiplexer (MUX)</strong>, or data selector, is a circuit that selects one of several input signals and forwards it to a single output line. The selection is controlled by a set of select lines.</p>
+                    </div>
+                    <div class="diagram-container">
+                        <div class="diagram-title">4-to-1 Multiplexer (MUX)</div>
+                        <img src="images/4_to_1_mux.jpg" alt="4-to-1 MUX Diagram" class="diagram-image">
+                    </div>
+                   
+                    <h3>Q5(b): Demultiplexer (DEMUX)</h3>
+                    <div class="definition">
+                        <p>A <strong>Demultiplexer (DEMUX)</strong> performs the reverse operation of a MUX. It takes a single data input and routes it to one of many possible outputs, based on select lines.</p>
+                    </div>
+                    <div class="diagram-container">
+                        <div class="diagram-title">1-to-4 Demultiplexer (DEMUX)</div>
+                        <img src="https://www.electronics-lab.com/wp-content/uploads/2022/10/1_to_4_nand-768x555.png" alt="1-to-4 DEMUX Diagram" class="diagram-image">
+                    </div>
+
+                    <h3>Q5(c): Applications of MUX & DEMUX</h3>
+                    <div class="applications">
+                        <h4>Applications of MUX & DEMUX:</h4>
+                        <ul>
+                            <li>Communication systems</li>
+                            <li>Data routing</li>
+                            <li>Control systems</li>
+                            <li>Switching circuits</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="highlight">
+                        <h4>Exam Tip:</h4>
+                        <p>Remember that MUX and DEMUX are complementary devices. MUX selects one input from many, while DEMUX routes one input to one of many outputs. Both are controlled by select lines.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<script src="https://static.app/js/static.js" type="text/javascript"></script>
+</body>
+</html>
