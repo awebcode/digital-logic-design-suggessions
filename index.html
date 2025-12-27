@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -24,6 +26,38 @@
     <meta name="twitter:description" content="Complete, exam-ready Digital Logic Design final exam answers." />
     <meta name="twitter:image" content="https://eee.zhsust.ac.bd/wp-content/uploads/2022/09/Digital-Electronics.jpg" />
     <style>
+        :root {
+            /* Zinc color palette */
+            --zinc-50: #fafafa;
+            --zinc-100: #f4f4f5;
+            --zinc-200: #e4e4e7;
+            --zinc-300: #d4d4d8;
+            --zinc-400: #a1a1aa;
+            --zinc-500: #71717a;
+            --zinc-600: #52525b;
+            --zinc-700: #3f3f46;
+            --zinc-800: #27272a;
+            --zinc-900: #18181b;
+            
+            /* Semantic tokens */
+            --primary: var(--zinc-800);
+            --primary-light: var(--zinc-600);
+            --secondary: var(--zinc-500);
+            --accent: var(--zinc-700);
+            --background: var(--zinc-50);
+            --surface: #ffffff;
+            --text-primary: var(--zinc-900);
+            --text-secondary: var(--zinc-600);
+            --border: var(--zinc-200);
+            --highlight: var(--zinc-100);
+            
+            /* Layout tokens */
+            --border-radius: 8px;
+            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            --transition: all 0.3s ease;
+        }
+
         * {
             margin: 0;
             padding: 0;
@@ -31,36 +65,38 @@
         }
         
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: #f4f7f6;
-            padding: 20px;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            background: var(--background);
+            color: var(--text-primary);
             line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
         }
         
         .container {
             max-width: 1000px;
             margin: 0 auto;
-            background: white;
-            border-radius: 8px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            background: var(--surface);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-lg);
+            overflow: hidden;
         }
         
         .header {
-            background: #2c3e50;
+            background: var(--primary);
             color: white;
-            padding: 20px;
+            padding: 24px 20px;
             text-align: center;
-            border-top-left-radius: 8px;
-            border-top-right-radius: 8px;
         }
         
         .header h1 {
-            font-size: 2em;
-            margin-bottom: 5px;
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 8px;
         }
         
         .header p {
-            font-size: 1.1em;
+            font-size: 1.1rem;
             opacity: 0.9;
         }
         
@@ -70,7 +106,7 @@
         
         .question-block {
             margin-bottom: 40px;
-            border-bottom: 2px solid #ecf0f1;
+            border-bottom: 1px solid var(--border);
             padding-bottom: 30px;
         }
         
@@ -81,61 +117,68 @@
         }
         
         .question {
-            color: #2980b9;
-            font-size: 1.5em;
-            font-weight: bold;
-            margin-bottom: 15px;
             display: flex;
-            align-items: center;
+            align-items: flex-start;
+            margin-bottom: 20px;
         }
         
         .q-number {
-            background: #3498db;
+            background: var(--accent);
             color: white;
-            width: 35px;
-            height: 35px;
+            width: 36px;
+            height: 36px;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin-right: 15px;
-            font-size: 1em;
+            margin-right: 16px;
+            font-size: 1rem;
+            font-weight: 600;
             flex-shrink: 0;
         }
         
+        .q-text {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--primary);
+            margin-top: 4px;
+        }
+        
         .answer {
-            padding-left: 50px;
+            padding-left: 52px;
         }
         
         .answer h3 {
-            color: #34495e;
-            font-size: 1.2em;
-            margin-bottom: 10px;
-            border-left: 4px solid #3498db;
-            padding-left: 10px;
+            color: var(--primary);
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 12px;
+            border-left: 4px solid var(--accent);
+            padding-left: 12px;
         }
         
         .definition {
-            background: #fdfefe;
-            border: 1px solid #ebedef;
-            padding: 15px;
-            border-radius: 5px;
-            margin-bottom: 15px;
+            background: var(--highlight);
+            border: 1px solid var(--border);
+            padding: 16px;
+            border-radius: var(--border-radius);
+            margin-bottom: 16px;
         }
         
         .diagram-container {
-            background: #f8f9fa;
-            border: 1px dashed #bdc3c7;
+            background: var(--surface);
+            border: 1px solid var(--border);
             padding: 20px;
-            margin: 15px 0;
+            margin: 16px 0;
             text-align: center;
-            border-radius: 5px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
         }
         
         .diagram-title {
-            font-weight: bold;
-            color: #2c3e50;
-            margin-bottom: 10px;
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 12px;
         }
         
         .diagram-image {
@@ -144,7 +187,7 @@
             margin: 0 auto;
             height: auto;
             background: white;
-            border: 1px solid #ddd;
+            border: 1px solid var(--border);
             padding: 10px;
             border-radius: 4px;
         }
@@ -153,12 +196,15 @@
             width: 100%;
             max-width: 400px;
             border-collapse: collapse;
-            margin: 15px 0;
-            font-size: 0.9em;
+            margin: 16px 0;
+            font-size: 0.9rem;
+            box-shadow: var(--shadow);
+            border-radius: var(--border-radius);
+            overflow: hidden;
         }
         
         .truth-table th {
-            background: #3498db;
+            background: var(--accent);
             color: white;
             padding: 10px;
             text-align: center;
@@ -167,60 +213,67 @@
         .truth-table td {
             padding: 8px;
             text-align: center;
-            border: 1px solid #ecf0f1;
+            border: 1px solid var(--border);
         }
         
         .formula {
-            background: #e8f4fd;
-            padding: 15px;
-            border-radius: 5px;
+            background: var(--highlight);
+            padding: 16px;
+            border-radius: var(--border-radius);
             font-family: 'Courier New', monospace;
-            margin: 10px 0;
-            border-left: 4px solid #3498db;
+            margin: 12px 0;
+            border-left: 4px solid var(--accent);
+            box-shadow: var(--shadow);
         }
         
         .sub-section {
-            margin-top: 20px;
+            margin-top: 24px;
         }
         
         .sub-section h4 {
-            color: #2c3e50;
-            margin-bottom: 10px;
+            color: var(--primary);
+            margin-bottom: 12px;
+            font-weight: 600;
         }
         
         .comparison-table {
             width: 100%;
             border-collapse: collapse;
-            margin: 15px 0;
+            margin: 16px 0;
+            box-shadow: var(--shadow);
+            border-radius: var(--border-radius);
+            overflow: hidden;
         }
         
         .comparison-table th {
-            background: #34495e;
+            background: var(--accent);
             color: white;
             padding: 12px;
             text-align: left;
+            font-weight: 600;
         }
         
         .comparison-table td {
             padding: 12px;
-            border: 1px solid #ecf0f1;
+            border: 1px solid var(--border);
         }
         
         .comparison-table tr:nth-child(even) {
-            background: #f8f9fa;
+            background: var(--highlight);
         }
         
         .applications {
-            background: #eafaf1;
-            border: 1px solid #c8e6c9;
-            padding: 15px;
-            border-radius: 5px;
-            margin: 15px 0;
+            background: var(--highlight);
+            border: 1px solid var(--border);
+            padding: 16px;
+            border-radius: var(--border-radius);
+            margin: 16px 0;
         }
         
         .applications h4 {
-            color: #2e7d32;
+            color: var(--primary);
             margin-bottom: 10px;
+            font-weight: 600;
         }
         
         .applications ul {
@@ -228,20 +281,116 @@
         }
         
         .applications li {
-            margin-bottom: 5px;
+            margin-bottom: 6px;
         }
         
         .highlight {
-            background: #fffde7;
-            border: 1px solid #fff9c4;
-            padding: 15px;
-            border-radius: 5px;
-            margin: 15px 0;
+            background: var(--highlight);
+            border: 1px solid var(--border);
+            padding: 16px;
+            border-radius: var(--border-radius);
+            margin: 16px 0;
+            box-shadow: var(--shadow);
         }
         
         .highlight h4 {
-            color: #f57f17;
+            color: var(--primary);
             margin-bottom: 10px;
+            font-weight: 600;
+        }
+        
+        /* Footer Styles */
+        footer {
+            background: var(--primary);
+            color: white;
+            text-align: center;
+            padding: 20px 15px;
+            font-size: 0.9rem;
+        }
+        
+        .footer-content p {
+            margin: 6px 0;
+        }
+        
+        .footer-content a {
+            color: var(--zinc-200);
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+        
+        .footer-content a:hover {
+            text-decoration: underline;
+        }
+        
+        /* Mobile Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                border-radius: 0;
+                margin: 0;
+            }
+            
+            .header {
+                padding: 20px 15px;
+            }
+            
+            .header h1 {
+                font-size: 1.5rem;
+            }
+            
+            .content {
+                padding: 20px 15px;
+            }
+            
+            .question {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .q-number {
+                margin-bottom: 8px;
+                margin-right: 0;
+            }
+            
+            .answer {
+                padding-left: 0;
+            }
+            
+            .comparison-table {
+                font-size: 0.8rem;
+            }
+            
+            .comparison-table th,
+            .comparison-table td {
+                padding: 8px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .header h1 {
+                font-size: 1.3rem;
+            }
+            
+            .content {
+                padding: 15px 10px;
+            }
+            
+            .q-text {
+                font-size: 1.1rem;
+            }
+            
+            .answer h3 {
+                font-size: 1.1rem;
+            }
+            
+            .comparison-table {
+                font-size: 0.75rem;
+            }
+            
+            .comparison-table th,
+            .comparison-table td {
+                padding: 6px;
+            }
         }
     </style>
 </head>
@@ -257,7 +406,7 @@
             <div class="question-block">
                 <div class="question">
                     <span class="q-number">1</span>
-                    <span>Logic Gates & Universal Gates</span>
+                    <span class="q-text">Logic Gates & Universal Gates</span>
                 </div>
                 
                 <div class="answer">
@@ -273,7 +422,7 @@
 
                     <h3>Q1(b): Implement Basic Gates using NOR</h3>
                       <div class="diagram-container">
-                            <img src="images/nor_gate.jpg" alt="NOT from NOR" class="diagram-image">
+                            <img src="/nor_gate.jpg" alt="NOT from NOR" class="diagram-image">
                         </div>
                     <div class="sub-section">
                         <h4>NOT Gate using NOR:</h4>
@@ -281,7 +430,7 @@
                         <div class="formula">Y = A ↓ A = (A + A)' = A'</div>
                         <div class="diagram-container">
                             <div class="diagram-title">NOT Gate from NOR</div>
-                            <img src="images/nor_to_not.jpg" alt="NOT from NOR" class="diagram-image">
+                            <img src="/nor_to_not.jpg" alt="NOT from NOR" class="diagram-image">
                         </div>
                     </div>
                     <div class="sub-section">
@@ -290,7 +439,7 @@
                         <div class="formula">Y = (A ↓ B)' = (A + B)'' = A + B</div>
                         <div class="diagram-container">
                             <div class="diagram-title">OR Gate from NOR</div>
-                            <img src="images/nor_to_or.jpg" alt="OR from NOR" class="diagram-image">
+                            <img src="/nor_to_or.jpg" alt="OR from NOR" class="diagram-image">
                         </div>
                     </div>
                     <div class="sub-section">
@@ -299,7 +448,7 @@
                         <div class="formula">Y = (A' ↓ B') = (A' + B')' = A · B</div>
                         <div class="diagram-container">
                             <div class="diagram-title">AND Gate from NOR</div>
-                            <img src="images/nor_to_and.jpg" alt="AND from NOR" class="diagram-image">
+                            <img src="/nor_to_and.jpg" alt="AND from NOR" class="diagram-image">
                         </div>
                     </div>
                 </div>
@@ -309,7 +458,7 @@
             <div class="question-block">
                 <div class="question">
                     <span class="q-number">2</span>
-                    <span>Karnaugh Map (K-Map) Simplification</span>
+                    <span class="q-text">Karnaugh Map (K-Map) Simplification</span>
                 </div>
                 
                 <div class="answer">
@@ -344,7 +493,7 @@
             <div class="question-block">
                 <div class="question">
                     <span class="q-number">3</span>
-                    <span>Adders and Subtractors</span>
+                    <span class="q-text">Adders and Subtractors</span>
                 </div>
                 
                 <div class="answer">
@@ -383,7 +532,7 @@
                     </div>
                     <div class="diagram-container">
                         <div class="diagram-title">Full Adder Circuit</div>
-                        <img src="  https://www.poriyaan.in/media/imgPori/images12/TY3oo29.png" alt="Full Adder Circuit" class="diagram-image">
+                        <img src="https://www.poriyaan.in/media/imgPori/images12/TY3oo29.png" alt="Full Adder Circuit" class="diagram-image">
                     </div>
                  
                  
@@ -412,7 +561,7 @@
             <div class="question-block">
                 <div class="question">
                     <span class="q-number">4</span>
-                    <span>Encoders and Decoders</span>
+                    <span class="q-text">Encoders and Decoders</span>
                 </div>
                 
                 <div class="answer">
@@ -422,7 +571,7 @@
                     </div>
                     <div class="diagram-container">
                         <div class="diagram-title">8-to-3 Encoder</div>
-                        <img src="images/8_to_3_encoder.jpg" alt="8-to-3 Encoder" class="diagram-image">
+                        <img src="/8_to_3_encoder.jpg" alt="8-to-3 Encoder" class="diagram-image">
                     </div>
 
                     <h3>Q4(b): Decoder Definition</h3>
@@ -489,7 +638,7 @@
             <div class="question-block">
                 <div class="question">
                     <span class="q-number">5</span>
-                    <span>Multiplexers (MUX) and Demultiplexers (DEMUX)</span>
+                    <span class="q-text">Multiplexers (MUX) and Demultiplexers (DEMUX)</span>
                 </div>
                 
                 <div class="answer">
@@ -499,7 +648,7 @@
                     </div>
                     <div class="diagram-container">
                         <div class="diagram-title">4-to-1 Multiplexer (MUX)</div>
-                        <img src="images/4_to_1_mux.jpg" alt="4-to-1 MUX Diagram" class="diagram-image">
+                        <img src="/4_to_1_mux.jpg" alt="4-to-1 MUX Diagram" class="diagram-image">
                     </div>
                    
                     <h3>Q5(b): Demultiplexer (DEMUX)</h3>
@@ -529,6 +678,14 @@
                 </div>
             </div>
         </div>
+        
+        <!-- Footer -->
+        <footer>
+            <div class="footer-content">
+                <p>&copy; <script>document.write(new Date().getFullYear())</script> Digital Logic Design - Exam Prep. All rights reserved.</p>
+                 <p>Made with <span class="heart">❤️</span> by <a href="https://github.com/awebcode" target="_blank">Asikur Rahman</a></p>
+            </div>
+        </footer>
     </div>
 
 <script src="https://static.app/js/static.js" type="text/javascript"></script>
